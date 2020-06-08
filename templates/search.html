@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block content %}
+  <div class="jumbo">
+    <h2>Consultar rota:</h2>
+        <form action="{{ url_for('calcpathgraph') }}" method="post">
+          <fieldset>
+            <div>
+                <label for="origin">Origem: </label>
+                <input type="text" id="origin" name="origin" class="form-control">
+              </div>
+              <div>
+                <label for="destiny">Destino: </label>
+                <input type="text" id="destiny" name="destiny" class="form-control">
+              </div>
+
+            <button type="submit">Consultar rota</button>
+          </fieldset>
+        </form>
+      <div>
+          <fieldset>
+          <h3>Retorno:</h3>
+              <div>
+
+                  <p>Rota: {{ routes }}</p>
+                  <p>Custo: {{ cost }}</p>
+              </div>
+        </fieldset>
+      </div>
+
+  </div>
+{% endblock %}

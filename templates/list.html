@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+{% block content %}
+  <div>
+    <h2>Rotas Disponiveis:</h2>
+     <table>
+        <thead>
+            <tr>
+                <th>Origem</th>
+                <th>Destino</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+         <tbody>
+         {% for route in routes %}
+         <tr>
+             <td>{{route.origin.id}}</td>
+             <td>{{route.destiny.id}}</td>
+             <td>{{route.weight}}</td>
+         </tr>
+         {% endfor %}
+         </tbody>
+     </table>
+  </div>
+{% endblock %}

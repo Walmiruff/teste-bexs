@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block content %}
+  <div>
+    <h2>Adicionar nova rota:</h2>
+     <form action="{{ url_for('add') }}" method="post">
+      <fieldset>
+        <div>
+            <label for="origin">Origem</label>
+            <input type="text" id="origin" name="origin" class="form-control">
+          </div>
+          <div>
+            <label for="destiny">Destino</label>
+            <input type="text" id="destiny" name="destiny" class="form-control">
+          </div>
+          <div>
+            <label for="custo">Custo</label>
+            <input type="number" id="custo" name="custo" class="form-control" placeholder="0">
+          </div>
+        <button type="submit">Registrar nova rota</button>
+      </fieldset>
+    </form>
+  </div>
+{% endblock %}
